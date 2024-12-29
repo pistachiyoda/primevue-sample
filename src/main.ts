@@ -1,7 +1,12 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import './assets/tailwind.css'
+import PrimeVue from 'primevue/config'
+import Button from 'primevue/button'
 
-createApp(App).mount('#app')
+createApp(App)
+  .use(PrimeVue, {
+    theme: 'none',
+  })
+  .component('Button', Button)
+  .mount('#app')
